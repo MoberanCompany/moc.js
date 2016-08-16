@@ -1,2 +1,2 @@
 # moc.js
-Javascript Component
+Moberan OpenSource Javascript Component Library.
