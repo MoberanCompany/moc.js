@@ -73,31 +73,76 @@
             </div>
 
             <div class="row">
+                <!-- toUrlEncode -->
                 <div class="col-md-12">
                     <div class="x_panel">
                         <div class="x_title">
-                            <h2>Introduce
-                                <small>JavaScript Common Library</small>
-                            </h2>
-
+                            <h2>toUrlEncode(String)</h2>
                             <div class="clearfix"></div>
                         </div>
                         <div class="x_content">
-
-                            <div class="col-md-12 col-lg-12 col-sm-11">
+                            <div class="col-md-12 col-lg-12 col-sm-12">
                                 <!-- blockquote -->
                                 <blockquote>
-                                    <p>Moc.js는 JavaScript Common Library로 조금 더 쉽게 여러 기능들을 사용할 수 있도록 구현하여 제공하고 있습니다.</p>
-                                    <p>제공하는 여러 기능들을 데모와 함께 확인하고 쉽게 구현하여 사용해보세요!</p>
+                                    <p>문자열을 URLEncode 하여 반환합니다.</p>
+                                    <p><small>moc.string.toUrlEncode("moc.js JavaScript Library");</small></p>
                                 </blockquote>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" id="toUrlEncode_Value" value="moc.js JavaScript Library">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="button" class="btn btn-primary" id="toUrlEncode_btn" onclick="mocStringDemo.toUrlEncode();">Encode</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" id="toUrlEncode_Result">
+                                    </div>
+                                </div>
                             </div>
-
                             <div class="clearfix"></div>
                         </div>
                     </div>
                 </div>
+                <!-- end toUrlEncode -->
+
+                <!-- toUrlDecode -->
+                <div class="col-md-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>toUrlDecode(String)</h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="col-md-12 col-lg-12 col-sm-12">
+                                <!-- blockquote -->
+                                <blockquote>
+                                    <p>URLEncode된 문자열을 URLDecode 하여 반환합니다.</p>
+                                    <p><small>moc.string.toUrlDecode("moc.js%20JavaScript%20Library");</small></p>
+                                </blockquote>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" >
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="button" class="btn btn-primary" >Decode</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- toUrlDecode -->
             </div>
         </div>
+    </div>
         <!-- /page content -->
 
         <!-- footer content -->
@@ -124,7 +169,13 @@
 <script src="../lib/moc.js"></script>
 
 <script>
-    console.log(moc.getVersion());
+    var mocStringDemo = {
+        toUrlEncode: function () {
+            var inputValue = $('#toUrlEncode_Value').val();
+            var result = moc.string.toUrlEncode(inputValue);
+            $('#toUrlEncode_Result').val(result);
+        }
+    };
 </script>
 </body>
 </html>
