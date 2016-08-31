@@ -73,38 +73,6 @@
             </div>
 
             <div class="row">
-                <div class="col-md-12">
-                    <div class="x_panel">
-                        <div class="x_title">
-                            <h2>함수명(매계변수)</h2>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="x_content">
-                            <div class="col-md-12 col-lg-12 col-sm-12">
-                                <!-- blockquote -->
-                                <blockquote>
-                                    <p>기능 설명.</p>
-                                    <p><small>예제 코드</small></p>
-                                </blockquote>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <input type="text" class="form-control" >
-                                    </div>
-                                    <div class="col-md-4">
-                                        <button type="button" class="btn btn-primary" >버튼명</button>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- isMobile() -->
                 <div class="col-md-12">
                     <div class="x_panel">
@@ -176,8 +144,7 @@
                             <div class="col-md-12 col-lg-12 col-sm-12">
                                 <!-- blockquote -->
                                 <blockquote>
-                                    <p>현재 모바일 디바이스 정보를 리턴합니다.</p>
-                                    <p>모바일 디바이스가 아닌경우 공백을 리턴합니다.</p>
+                                    <p>현재 브라우저 정보를 리턴합니다.</p>
                                     <p><small>moc.util.getBrowser()</small></p>
                                 </blockquote>
                                 <div class="row">
@@ -504,8 +471,7 @@
         formSerializeJsonObject: function () {
             var result = moc.util.formSerializeJsonObject($('#formSerializeJsonObject_form'));
             $('#formSerializeJsonObject_Result').val(JSON.stringify(result));
-        }
-      },
+        },
       setCookie: function() {
           var name = $('#set_cookie_name').val();
           var value = $('#set_cookie_value').val();
@@ -530,12 +496,6 @@
           var name = $('#save_localstorage_name').val();
           var value = $('#save_localstorage_value').val();
           moc.util.saveLocalStorage(name, value);
-          alert('이름 : ' + name + ' 값 : ' + value + ' 저장 성공');
-          moc.log.debug('이름 : ' + name + ' 값 : ' + value + ' 저장 성공');
-          moc.log.info('이름 : ' + name + ' 값 : ' + value + ' 저장 성공');
-          moc.log.warn('이름 : ' + name + ' 값 : ' + value + ' 저장 성공');
-          moc.log.error('이름 : ' + name + ' 값 : ' + value + ' 저장 성공');
-          moc.log.fatal('이름 : ' + name + ' 값 : ' + value + ' 저장 성공');
       },
       getLocalStorage: function () {
           var name = $('#get_localstorage_name').val();
