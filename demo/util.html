@@ -164,6 +164,36 @@
                     </div>
                 </div>
                 <!-- end getDevice() -->
+
+                <!-- getBrowser -->
+                <div class="col-md-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>getBrowser()</h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="col-md-12 col-lg-12 col-sm-12">
+                                <!-- blockquote -->
+                                <blockquote>
+                                    <p>현재 모바일 디바이스 정보를 리턴합니다.</p>
+                                    <p>모바일 디바이스가 아닌경우 공백을 리턴합니다.</p>
+                                    <p><small>moc.util.getBrowser()</small></p>
+                                </blockquote>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" id="getBrowser_Result" >
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="button" class="btn btn-primary" id="getBrowser_Btn" onclick="mocUtilDemo.getBrowser();" >getBrowser()</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end getBrowser -->
             </div>
         </div>
         <!-- /page content -->
@@ -193,13 +223,16 @@
 
 <script>
     var mocUtilDemo = {
-      isMobile: function () {
+        isMobile: function () {
           var result = moc.util.isMobile();
           $('#isMobile_Result').val(result);
-      },
+        },
         getMobileDevice: function () {
             $('#getMobileDevice_Result').val(moc.util.getMobileDevice());
-        }
+        },
+        getBrowser: function () {
+            $('#getBrowser_Result').val(JSON.stringify(moc.util.getBrowser()));
+        },
     };
 </script>
 </body>
