@@ -153,16 +153,20 @@
                                 <!-- blockquote -->
                                 <blockquote>
                                     <p>문자열 formatting</p>
-                                    <p><small>moc.string.format("{0} + {1} = {2} {3}", 1, 2, 3, "입니다.");</small></p>
                                 </blockquote>
                                 <div class="row">
                                     <div class="col-md-8">
-                                        <input type="text" class="form-control" id="format_out">
+                                        <input type="text" class="form-control" id="format_in" value="moc.string.format('{0} + {1} = {2} {3}', 1, 2, 3, '입니다.');">
                                     </div>
                                     <div class="col-md-4">
                                         <button type="button" class="btn btn-primary" onclick="mocStringDemo.format()" >Call</button>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" id="format_out">
+                                    </div>
+                                </div>                                                                
                             </div>
                             <div class="clearfix"></div>
                         </div>
@@ -188,16 +192,20 @@
                                     <p><small>hh: hour</small></p>
                                     <p><small>mm: minute</small></p>
                                     <p><small>ss: second</small></p>
-                                    <p><small>moc.string.toDate('2016-08-31 15/40/12','yyyy-MM-dd hh/mm/ss');</small></p>
                                 </blockquote>
                                 <div class="row">
                                     <div class="col-md-8">
-                                        <input type="text" class="form-control" id="date_out">
+                                        <input type="text" class="form-control" id="date_in" value="moc.string.toDate('2016-08-31 15/40/12','yyyy-MM-dd hh/mm/ss');">
                                     </div>
                                     <div class="col-md-4">
                                         <button type="button" class="btn btn-primary" onclick="mocStringDemo.toDate()" >Call</button>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" id="date_out">
+                                    </div>
+                                </div>                                
                             </div>
                             <div class="clearfix"></div>
                         </div>
@@ -245,11 +253,13 @@
             $('#decode_out').val(result);            
         },
         format: function () {
-            var result = moc.string.format("{0} + {1} = {2} {3}", 1, 2, 3, "입니다.");
+            var inputValue = $('#format_in').val();
+            var result = eval(inputValue);
             $('#format_out').val(result);            
         },
         toDate: function () {
-            var result = moc.string.toDate('2016-08-31 15/40/12','yyyy-MM-dd hh/mm/ss');
+            var inputValue = $('#date_in').val();
+            var result = eval(inputValue);
             $('#date_out').val(result);            
         }
     };
