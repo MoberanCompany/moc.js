@@ -212,11 +212,17 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <form id="formSerializeJsonObject_form">
-                                            <input type="text" class="form-control" name="testName" id="formSerializeJsonObject_Result" >
+                                            <input type="text" class="form-control" name="testName" id="formSerializeJsonObject_Value" >
                                         </form>
+
                                     </div>
                                     <div class="col-md-4">
                                         <button type="button" class="btn btn-primary" id="formSerializeJsonObject_Btn" onclick="mocUtilDemo.formSerializeJsonObject();" >formSerializeJsonObject()</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" id="formSerializeJsonObject_Result" >
                                     </div>
                                 </div>
                             </div>
@@ -265,7 +271,8 @@
             $('#getBrowser_Result').val(JSON.stringify(moc.util.getBrowser()));
         },
         formSerializeJsonObject: function () {
-            console.log(moc.util.formSerializeJsonObject($('#formSerializeJsonObject_form')));
+            var result = moc.util.formSerializeJsonObject($('#formSerializeJsonObject_form'));
+            $('#formSerializeJsonObject_Result').val(JSON.stringify(result));
         }
     };
 </script>
