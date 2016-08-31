@@ -104,6 +104,34 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="col-md-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>isMobile()</h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="col-md-12 col-lg-12 col-sm-12">
+                                <!-- blockquote -->
+                                <blockquote>
+                                    <p>현재 클라이언트의 모바일 디바이스 여부를 리턴합니다.</p>
+                                    <p>true: mobile, false: pc</p>
+                                    <p><small>moc.util.isMobile()</small></p>
+                                </blockquote>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" id="isMobile_Result" >
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="button" class="btn btn-primary" id="isMoible_Btn" onclick="mocUtilDemo.isMobile()" >isMobile()</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- /page content -->
@@ -127,5 +155,17 @@
 <script src="vendors/fastclick/lib/fastclick.js"></script>
 <!-- Custom Theme Scripts -->
 <script src="js/custom.min.js"></script>
+
+<!-- moc.js -->
+<script src="../lib/moc.js"></script>
+
+<script>
+    var mocUtilDemo = {
+      isMobile: function () {
+          var result = moc.util.isMobile();
+          $('#isMobile_Result').val(result);
+      }
+    };
+</script>
 </body>
 </html>
