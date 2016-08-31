@@ -73,30 +73,75 @@
             </div>
 
             <div class="row">
+                <!-- toComma -->
                 <div class="col-md-12">
                     <div class="x_panel">
                         <div class="x_title">
-                            <h2>함수명(매계변수)</h2>
+                            <h2>toComma(Number)</h2>
+
                             <div class="clearfix"></div>
                         </div>
                         <div class="x_content">
                             <div class="col-md-12 col-lg-12 col-sm-12">
-                                <!-- blockquote -->
                                 <blockquote>
-                                    <p>기능 설명.</p>
-                                    <p><small>예제 코드</small></p>
+                                    <p>return 1,000</p>
+
+                                    <p>
+                                        <small>moc.number.toComma("1000");</small>
+                                    </p>
                                 </blockquote>
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <input type="text" class="form-control" >
+                                        <input type="text" class="form-control" id="txtComma">
                                     </div>
                                     <div class="col-md-4">
-                                        <button type="button" class="btn btn-primary" >버튼명</button>
+                                        <button type="button" class="btn btn-primary" onclick="mocNumberDemo.toComma()">
+                                            Execute
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" id="resultComma">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- toComma -->
+
+                <!-- fillZero -->
+                <div class="col-md-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>fillZero(Number, length)</h2>
+
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="col-md-12 col-lg-12 col-sm-12">
+                                <blockquote>
+                                    <p>return 00001</p>
+                                    <p>
+                                        <small>moc.number.fillZero(1, 5);</small>
+                                    </p>
+                                </blockquote>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" id="txtFillZeroData1">
+                                        <input type="text" class="form-control" id="txtFillZeroData2" value="5">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="button" class="btn btn-primary" onclick="mocNumberDemo.fillZero()">
+                                            Execute
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" id="resultFillZero">
                                     </div>
                                 </div>
                             </div>
