@@ -123,15 +123,15 @@
                                 </blockquote>
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <input type="text" class="form-control" >
+                                        <input type="text" class="form-control" id="decode_in" value="moc.js%20JavaScript%20Library">
                                     </div>
                                     <div class="col-md-4">
-                                        <button type="button" class="btn btn-primary" >Decode</button>
+                                        <button type="button" class="btn btn-primary" id="toUrlEncode_btn" onclick="mocStringDemo.toUrlDecode();">Decode</button>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" id="decode_out">
                                     </div>
                                 </div>
                             </div>
@@ -141,31 +141,26 @@
                 </div>
                 <!-- toUrlDecode -->
                 
-                <!-- toUrlDecode -->
+                <!-- format -->
                 <div class="col-md-12">
                     <div class="x_panel">
                         <div class="x_title">
-                            <h2>toUrlDecode(String)</h2>
+                            <h2>format(args)</h2>
                             <div class="clearfix"></div>
                         </div>
                         <div class="x_content">
                             <div class="col-md-12 col-lg-12 col-sm-12">
                                 <!-- blockquote -->
                                 <blockquote>
-                                    <p>URLEncode된 문자열을 URLDecode 하여 반환합니다.</p>
-                                    <p><small>moc.string.toUrlDecode("moc.js%20JavaScript%20Library");</small></p>
+                                    <p>문자열 formatting</p>
+                                    <p><small>moc.string.format("{0} + {1} = {2} {3}", 1, 2, 3, "입니다.");</small></p>
                                 </blockquote>
                                 <div class="row">
-                                    <div class="col-md-4">
-                                        <input type="text" class="form-control" >
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" id="format_out">
                                     </div>
                                     <div class="col-md-4">
-                                        <button type="button" class="btn btn-primary" >Decode</button>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <input type="text" class="form-control">
+                                        <button type="button" class="btn btn-primary" onclick="mocStringDemo.format()" >Call</button>
                                     </div>
                                 </div>
                             </div>
@@ -173,7 +168,42 @@
                         </div>
                     </div>
                 </div>
-                <!-- toUrlDecode -->                
+                <!-- format -->                
+                
+                <!-- date -->
+                <div class="col-md-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>toDate(value, format)</h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="col-md-12 col-lg-12 col-sm-12">
+                                <!-- blockquote -->
+                                <blockquote>
+                                    <p>string to date</p>
+                                    <p><small>yyyy: year</small></p>
+                                    <p><small>MM: month</small></p>
+                                    <p><small>dd: day</small></p>
+                                    <p><small>hh: hour</small></p>
+                                    <p><small>mm: minute</small></p>
+                                    <p><small>ss: second</small></p>
+                                    <p><small>moc.string.toDate('2016-08-31 15/40/12','yyyy-MM-dd hh/mm/ss');</small></p>
+                                </blockquote>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" id="date_out">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="button" class="btn btn-primary" onclick="mocStringDemo.toDate()" >Call</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- date -->                                
             </div>
         </div>
     </div>
@@ -208,6 +238,19 @@
             var inputValue = $('#toUrlEncode_Value').val();
             var result = moc.string.toUrlEncode(inputValue);
             $('#toUrlEncode_Result').val(result);
+        },
+        toUrlDecode: function () {
+            var inputValue = $('#decode_in').val();
+            var result = moc.string.toUrlDecode(inputValue);
+            $('#decode_out').val(result);            
+        },
+        format: function () {
+            var result = moc.string.format("{0} + {1} = {2} {3}", 1, 2, 3, "입니다.");
+            $('#format_out').val(result);            
+        },
+        toDate: function () {
+            var result = moc.string.toDate('2016-08-31 15/40/12','yyyy-MM-dd hh/mm/ss');
+            $('#date_out').val(result);            
         }
     };
 </script>
