@@ -149,6 +149,47 @@
                         </div>
                     </div>
                 </div>
+                <!-- fillZero -->
+
+                <!-- toBytes -->
+                <div class="col-md-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>toBytes(Number, type)</h2>
+
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="col-md-12 col-lg-12 col-sm-12">
+                                <blockquote>
+                                    <p>return 1kb</p>
+                                    <p>
+                                        <small>moc.number.toBytes(1000000, kb, true);</small>
+                                    </p>
+                                </blockquote>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" id="txtToBytesData1">
+                                        <input type="text" class="form-control" id="txtToBytesData2" value="kb" placeholder="kb, mb, gb, tb, pb, eb, zb, yb">
+                                        <input type="text" class="form-control" id="txtToBytesData3" value="true" placeholder="">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="button" class="btn btn-primary" onclick="mocNumberDemo.toBytes()">
+                                            Execute
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" id="resultToBytes">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- toBytes -->
             </div>
         </div>
         <!-- /page content -->
@@ -172,5 +213,35 @@
 <script src="vendors/fastclick/lib/fastclick.js"></script>
 <!-- Custom Theme Scripts -->
 <script src="js/custom.min.js"></script>
+
+<!-- moc.js -->
+<script src="../lib/moc.js"></script>
+
+<script>
+
+//    return ((a * 100) + (b * 100)) / 100;
+
+    var mocNumberDemo = {
+        toComma: function () {
+            var inputValue = $('#txtComma').val();
+            var result = moc.number.toComma(inputValue);
+            $('#resultComma').val(result);
+        },
+        fillZero: function () {
+            var inputValue1 = $('#txtFillZeroData1').val();
+            var inputValue2 = $('#txtFillZeroData2').val();
+            var result = moc.number.fillZero(inputValue1, inputValue2);
+            $('#resultFillZero').val(result);
+        },
+        toBytes: function(){
+            var inputValue1 = $('#txtToBytesData1').val();
+            var inputValue2 = $('#txtToBytesData2').val();
+            var inputValue3 = $('#txtToBytesData3').val();
+            var result = moc.number.toBytes(inputValue1, inputValue2, inputValue3);
+            $('#resultToBytes').val(result);
+        }
+    };
+</script>
+
 </body>
 </html>
