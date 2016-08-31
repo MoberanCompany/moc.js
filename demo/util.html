@@ -73,38 +73,6 @@
             </div>
 
             <div class="row">
-                <div class="col-md-12">
-                    <div class="x_panel">
-                        <div class="x_title">
-                            <h2>함수명(매계변수)</h2>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="x_content">
-                            <div class="col-md-12 col-lg-12 col-sm-12">
-                                <!-- blockquote -->
-                                <blockquote>
-                                    <p>기능 설명.</p>
-                                    <p><small>예제 코드</small></p>
-                                </blockquote>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <input type="text" class="form-control" >
-                                    </div>
-                                    <div class="col-md-4">
-                                        <button type="button" class="btn btn-primary" >버튼명</button>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- isMobile() -->
                 <div class="col-md-12">
                     <div class="x_panel">
@@ -176,8 +144,7 @@
                             <div class="col-md-12 col-lg-12 col-sm-12">
                                 <!-- blockquote -->
                                 <blockquote>
-                                    <p>현재 모바일 디바이스 정보를 리턴합니다.</p>
-                                    <p>모바일 디바이스가 아닌경우 공백을 리턴합니다.</p>
+                                    <p>현재 브라우저 정보를 리턴합니다.</p>
                                     <p><small>moc.util.getBrowser()</small></p>
                                 </blockquote>
                                 <div class="row">
@@ -232,6 +199,227 @@
                 </div>
                 <!-- end getBrowser -->
             </div>
+            
+            <div class="col-md-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>setCookie(name, value, date)</h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="col-md-12 col-lg-12 col-sm-12">
+                                <!-- blockquote -->
+                                <blockquote>
+                                    <p>쿠키를 저장합니다. name, value 페어로 저장되며 date에 입력한 날자만큼 저장됩니다.</p>
+                                    <p>(date가 null일시 기본 30일)</p>
+                                    <p><small>setCookie('이름', '값', 30)</small></p>
+                                </blockquote>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        name <input type="text" class="form-control" id="set_cookie_name" value="name" >
+                                    </div>
+                                    <div class="col-md-2">
+                                        value <input type="text" class="form-control" id="set_cookie_value" value="key">
+                                    </div>
+                                    <div class="col-md-2">
+                                        date <input type="text" class="form-control" id="set_cookie_date" value="30">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button type="button" class="btn btn-primary" onclick="mocUtilDemo.setCookie()" >setCookie</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="col-md-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>getCookie(name)</h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="col-md-12 col-lg-12 col-sm-12">
+                                <!-- blockquote -->
+                                <blockquote>
+                                    <p>저장한 쿠키를 불러옵니다.</p>
+                                    <p><small>getCookie('이름')</small></p>
+                                </blockquote>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        이름 <input type="text" class="form-control" id="get_cookie_name" value="name">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button type="button" class="btn btn-primary" onclick="mocUtilDemo.getCookie()" >getCookie</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        결과 <input type="text" class="form-control" id="get_cookie_res">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="col-md-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>checkLocalStorage()</h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="col-md-12 col-lg-12 col-sm-12">
+                                <!-- blockquote -->
+                                <blockquote>
+                                    <p>로컬 스토리지 사용 가능여부를 반환합니다.</p>
+                                    <p><small>checkLocalStorage(checkLocalStorage)</small></p>
+                                </blockquote>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <button type="button" class="btn btn-primary" onclick="mocUtilDemo.checkLocalStorage()" >checkLocalStorage</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="col-md-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>saveLocalStorage(name, value)</h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="col-md-12 col-lg-12 col-sm-12">
+                                <!-- blockquote -->
+                                <blockquote>
+                                    <p>로컬 스토리지에 데이터를 저장합니다.</p>
+                                    <p><small>saveLocalStorage('이름', '값')</small></p>
+                                </blockquote>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        name <input type="text" class="form-control" id="save_localstorage_name" value="name">
+                                    </div>
+                                    <div class="col-md-2">
+                                        value <input type="text" class="form-control" id="save_localstorage_value" value="value">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button type="button" class="btn btn-primary" onclick="mocUtilDemo.saveLocalStorage()" >saveLocalStorage</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="col-md-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>getLocalStorage(name)</h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="col-md-12 col-lg-12 col-sm-12">
+                                <!-- blockquote -->
+                                <blockquote>
+                                    <p>로컬 스토리지에서 데이터를 불러옵니다.</p>
+                                    <p><small>getLocalStorage('이름')</small></p>
+                                </blockquote>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        이름 <input type="text" class="form-control" id="get_localstorage_name" value="name">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button type="button" class="btn btn-primary" onclick="mocUtilDemo.getLocalStorage()" >getLocalStorage</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        결과 <input type="text" class="form-control" id="get_localstorage_res">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="col-md-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>removeLocalStorage(name)</h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="col-md-12 col-lg-12 col-sm-12">
+                                <!-- blockquote -->
+                                <blockquote>
+                                    <p>로컬 스토리지에서 데이터를 삭제합니다.</p>
+                                    <p><small>removeLocalStorage('이름')</small></p>
+                                </blockquote>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        이름 <input type="text" class="form-control" id="remove_localstorage_name" value="name">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button type="button" class="btn btn-primary" onclick="mocUtilDemo.removeLocalStorage()" >removeLocalStorage</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>log</h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="col-md-12 col-lg-12 col-sm-12">
+                                <!-- blockquote -->
+                                <blockquote>
+                                    <p>debug, info, warn, error, fatal 로그를 출력합니다.</p>
+                                    <p><small>debug('log')</small></p>
+                                </blockquote>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        <div class="dropup">
+                                          <button class="btn btn-default dropdown-toggle" type="button" id="log_level_text" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            DEBUG
+                                            <span class="caret"></span>
+                                          </button>
+                                          <ul id="log_level_dropdown" class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                            <li><a >DEBUG</a></li>
+                                            <li><a >INFO</a></li>
+                                            <li><a >WARN</a></li>
+                                            <li><a >ERROR</a></li>
+                                            <li><a >FATAL</a></li>
+                                          </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        log <input type="text" class="form-control" id="log_text" value="default log">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button type="button" class="btn btn-primary" onclick="mocUtilDemo.log()" >log</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
         </div>
         <!-- /page content -->
 
@@ -259,6 +447,16 @@
 <script src="../lib/moc.js"></script>
 
 <script>
+    
+    var LOG_LEVEL = 'DEBUG';
+    
+    $('#log_level_dropdown li').on('click', function(){
+        LOG_LEVEL = $(this).text();
+        //$(this).parents('.btn-group').find('.dropdown-toggle').html(LOG_LEVEL+'<span class="caret"></span>');
+        $('#log_level_text').html(LOG_LEVEL+'<span class="caret"></span>');
+    });
+
+    
     var mocUtilDemo = {
         isMobile: function () {
           var result = moc.util.isMobile();
@@ -273,7 +471,64 @@
         formSerializeJsonObject: function () {
             var result = moc.util.formSerializeJsonObject($('#formSerializeJsonObject_form'));
             $('#formSerializeJsonObject_Result').val(JSON.stringify(result));
-        }
+        },
+      setCookie: function() {
+          var name = $('#set_cookie_name').val();
+          var value = $('#set_cookie_value').val();
+          var date = $('#set_cookie_date').val();
+          moc.util.setCookie(name, value, date);
+          alert('name : ' + name + ' value : ' + value + ' date : ' + date + ' save success');
+      },
+      getCookie: function() {
+          var name = $('#get_cookie_name').val();
+          var res = moc.util.getCookie(name);
+          $('#get_cookie_res').val(res);
+      },
+      checkLocalStorage: function() {
+          if (moc.util.checkLocalStorage()) {
+              alert('LocalStorage available');
+          }
+          else {
+              alert('LocalStorage unuseable');
+          }
+      },
+      saveLocalStorage: function() {
+          var name = $('#save_localstorage_name').val();
+          var value = $('#save_localstorage_value').val();
+          moc.util.saveLocalStorage(name, value);
+          alert('name : ' + name + ' value : ' + value + ' save success');
+      },
+      getLocalStorage: function () {
+          var name = $('#get_localstorage_name').val();
+          var res = moc.util.getLocalStorage(name);
+          $('#get_localstorage_res').val(res);
+      },
+      removeLocalStorage: function() {
+          var name = $('#remove_localstorage_name').val();
+          var res = moc.util.removeLocalStorage(name);
+          
+          if(res) {
+              alert('Delete success');
+          } else {
+              alert('Delete fail');
+          }
+      },
+      log: function() {
+        
+        var log = $("#log_text").val();
+          
+        if (LOG_LEVEL == 'DEBUG'){
+            moc.log.debug(log);
+        } else if (LOG_LEVEL == 'INFO'){
+            moc.log.info(log);
+        } else if (LOG_LEVEL == 'WARN'){
+            moc.log.warn(log);
+        } else if (LOG_LEVEL == 'ERROR'){
+            moc.log.error(log);
+        } else if (LOG_LEVEL == 'FATAL'){
+            moc.log.fatal(log);
+        } 
+      },
     };
 </script>
 </body>
