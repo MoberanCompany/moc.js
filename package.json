@@ -1,0 +1,23 @@
+{
+  "name": "moc.js",
+  "version": "1.0.0",
+  "description": "Moberan OpenSource Javascript Component Library.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkswjdals89/moc.js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dkswjdals89/moc.js/issues"
+  },
+  "homepage": "https://github.com/dkswjdals89/moc.js#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-uglify": "^2.0.0"
+  }
+}
